@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
       'id',
       'tag_name'
     ],
-    include: [
+    includeAs: [
       {
         model: Product,
         attributes: [
@@ -42,7 +42,7 @@ router.get('/:id', (req, res) => {
       'id',
       'tag_name'
     ],
-    include: [
+    includeAs: [
       {
         model: Product,
         attributes: [

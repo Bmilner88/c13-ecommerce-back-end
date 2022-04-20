@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
       'stock',
       'category_id'
     ],
-    include: [
+    includeAs: [
       {
         model: Category,
         attributes: ['id', 'category_name']
@@ -25,6 +25,11 @@ router.get('/', (req, res) => {
         attributes: ['id', 'tag_name']
       }
     ]
+  })
+  .then(data => res.json(data))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 
@@ -43,7 +48,7 @@ router.get('/:id', (req, res) => {
       'stock',
       'category_id'
     ],
-    include: [
+    includeAs: [
       {
         model: Category,
         attributes: ['id', 'category_name']
