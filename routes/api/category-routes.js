@@ -40,10 +40,7 @@ router.get('/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'product_name',
-      'price',
-      'stock',
-      'category_id'
+      'category_name'
     ],
     include: [
       {
@@ -57,7 +54,13 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-  .then(data => res.json(data))
+  .then(data => {
+    if(!data) {
+      res.status(404).json({ message: 'No category found with this id' });
+      return;
+    }
+    res.json(data);
+  })
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
