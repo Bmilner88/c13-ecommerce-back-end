@@ -43,7 +43,7 @@ You must have Node.js AND MySql installed to run the program!
 
 
 ## Links
-* [Walkthrough Video]()
+* [Walkthrough Video](https://drive.google.com/file/d/1HQiFiBLN0FckBLRos_pvScCGvO9r9LBy/view)
 
 * [Heroku Deployment](https://c13-ecommerce-back-end.herokuapp.com/api/)
     - Must add /categories, /products or /tags at the end of the url for testing!
