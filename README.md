@@ -9,8 +9,7 @@ A simple application that allows users to GET, CREATE, UPDATE and DELETE product
     * Node.js
     * MySQL
     * Sequelize
-
-
+    
 
 ## Table of Contents
 
